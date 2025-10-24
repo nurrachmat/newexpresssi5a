@@ -12,5 +12,18 @@ const getAllProdi = async (req, res) => {
     }
 }
 
+const createProdi = async (req, res) => {
+    // buat instance prodi baru
+    const prodi = new prodiSchema({
+        nama: req.body.nama,
+        singkatan: req.body.singkatan,
+    })
+
+    // simpan data fakultas ke dalam collection
+    const hasil = await fakultas.save();
+    // beri response json HTTP_CREATED
+    res.status(201).json(hasil);
+}
+
 // export 
 module.exports = {getAllProdi}

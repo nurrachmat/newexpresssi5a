@@ -4,7 +4,7 @@ const router = express.Router();
 // impor prodiController
 const prodiController = require("../controllers/prodiController")
 
-// route GET fakultas
+// route GET prodi
 router.get("/", prodiController.getAllProdi)
 
 // expor module
