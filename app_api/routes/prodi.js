@@ -12,7 +12,8 @@ router.get("/", prodiController.getAllProdi);
 router.get("/:id", prodiController.getProdiById);
 
 // route POST untuk menambahkan prodi baru
-router.post("/", authMiddleware, prodiController.createProdi);
+router.post("/", prodiController.createProdi);
+// router.post("/", authMiddleware, prodiController.createProdi);
 
 // route PUT untuk mengupdate prodi
 router.put("/:id", authMiddleware, prodiController.updateProdi);
