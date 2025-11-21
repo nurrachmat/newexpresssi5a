@@ -12,7 +12,7 @@ router.get("/", mahasiswaController.getAllMahasiswa);
 router.get("/:id", mahasiswaController.getMahasiswaById);
 
 // route POST untuk menambahkan mahasiswa baru
-router.post("/", authMiddleware, mahasiswaController.createMahasiswa);
+router.post("/", mahasiswaController.createMahasiswa);
 
 // route PUT untuk mengupdate mahasiswa
 router.put("/:id", authMiddleware, mahasiswaController.updateMahasiswa);
