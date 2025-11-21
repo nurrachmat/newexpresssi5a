@@ -7,7 +7,8 @@ const authMiddleware = require("../middleware/authMiddleware")
 
 // route fakultas
 router.get("/", fakultasController.getAllFakultas)
-router.post("/", authMiddleware, fakultasController.createFakultas)
+router.post("/", fakultasController.createFakultas)
+// router.post("/", authMiddleware, fakultasController.createFakultas)
 router.get("/:id", fakultasController.getFakultasById)
 router.delete("/:id", fakultasController.deleteFakultasById)
 router.put("/:id", fakultasController.updateFakultasById)
