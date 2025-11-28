@@ -13,13 +13,13 @@ router.get("/:id", prodiController.getProdiById);
 
 // route POST untuk menambahkan prodi baru
 router.post("/", prodiController.createProdi);
-// router.post("/", authMiddleware, prodiController.createProdi);
+// router.post("/", prodiController.createProdi);
 
 // route PUT untuk mengupdate prodi
-router.put("/:id", authMiddleware, prodiController.updateProdi);
+router.put("/:id", prodiController.updateProdi);
 
 // route DELETE untuk menghapus prodi
-router.delete("/:id", authMiddleware, prodiController.deleteProdi);
+router.delete("/:id", prodiController.deleteProdi);
 
 // expor module
 module.exports = router;
