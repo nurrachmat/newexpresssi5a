@@ -15,10 +15,10 @@ router.get("/:id", mahasiswaController.getMahasiswaById);
 router.post("/", mahasiswaController.createMahasiswa);
 
 // route PUT untuk mengupdate mahasiswa
-router.put("/:id", authMiddleware, mahasiswaController.updateMahasiswa);
+router.put("/:id", mahasiswaController.updateMahasiswa);
 
 // route DELETE untuk menghapus mahasiswa
-router.delete("/:id", authMiddleware, mahasiswaController.deleteMahasiswa);
+router.delete("/:id", mahasiswaController.deleteMahasiswa);
 
 // expor module
 module.exports = router;
