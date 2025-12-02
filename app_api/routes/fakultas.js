@@ -11,7 +11,7 @@ router.post("/", fakultasController.createFakultas)
 // router.post("/", authMiddleware, fakultasController.createFakultas)
 router.get("/:id", fakultasController.getFakultasById)
 router.delete("/:id", fakultasController.deleteFakultasById)
-router.put("/:id", fakultasController.updateFakultasById)
+router.patch("/:id", fakultasController.updateFakultasById)
 
 // expor module
 module.exports = router
