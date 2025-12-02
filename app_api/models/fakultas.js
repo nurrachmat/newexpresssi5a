@@ -11,11 +11,9 @@ const fakultasSchema = new mongoose.Schema({
         type: String,
         required: true,
         trim: true
-    },
-    createdAt: {
-        type: Date,
-        default: Date.now
     }
+}, {
+    timestamps: true  // Otomatis menambahkan createdAt dan updatedAt
 })
 // sertakan skema fakultas ke dalam model Fakultas
 const Fakultas = mongoose.model("Fakultas", fakultasSchema)
